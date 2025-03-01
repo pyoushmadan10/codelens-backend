@@ -3,7 +3,7 @@ const aiRoutes = require('./routes/ai.routes')
 const cors = require('cors')
 const app=express()
 app.use(express.json())
-app.use(cors())
+app.use(cors({ origin: 'https://frontend-codelens.onrender.com/' }))
 app.get('/',(req,res)=>{
     res.send("Welcome to the server!");
 })
